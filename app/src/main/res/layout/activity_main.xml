@@ -32,7 +32,6 @@
             android:background="#222222"
             android:text="AC"
             android:textColor="#FFF"
-
             android:textSize="28dp" />
 
         <Button
@@ -42,7 +41,6 @@
             android:layout_marginRight="5dp"
             android:background="#222222"
             android:text="Del"
-
             android:textColor="#FFF"
             android:textSize="28dp" />
 
@@ -50,10 +48,7 @@
             android:id="@+id/btdiv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
-
             android:background="#222222"
-
             android:text="/"
             android:textColor="#FFF"
             android:textSize="30sp" />
@@ -63,21 +58,16 @@
 
         <Button
             android:id="@+id/bt7"
-
             android:layout_width="match_parent"
-
             android:layout_height="108dp"
             android:layout_marginRight="5dp"
             android:background="#464646"
-
-
             android:text="7"
             android:textColor="#FFF"
             android:textSize="30sp" />
 
         <Button
             android:id="@+id/bt8"
-
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginRight="5dp"
@@ -92,8 +82,6 @@
             android:layout_height="match_parent"
             android:layout_marginRight="5dp"
             android:background="#464646"
-
-
             android:text="9"
             android:textColor="#FFF"
             android:textSize="30sp" />
@@ -103,10 +91,7 @@
             android:id="@+id/btmul"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
-
             android:background="#222222"
-
             android:text="*"
             android:textColor="#FFF"
             android:textSize="30sp" />
@@ -120,34 +105,26 @@
             android:layout_height="108dp"
             android:layout_marginRight="5dp"
             android:background="#464646"
-
-
             android:text="4"
             android:textColor="#FFF"
             android:textSize="30sp" />
 
         <Button
             android:id="@+id/bt5"
-
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginRight="5dp"
             android:background="#464646"
-
-
             android:text="5"
             android:textColor="#FFF"
             android:textSize="30sp" />
 
         <Button
             android:id="@+id/bt6"
-
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginRight="5dp"
             android:background="#464646"
-
-
             android:text="6"
             android:textColor="#FFF"
             android:textSize="30sp" />
@@ -156,7 +133,6 @@
             android:id="@+id/btsub"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
             android:background="#222222"
             android:text="-"
             android:textColor="#FFF"
@@ -191,8 +167,6 @@
             android:layout_height="match_parent"
             android:layout_marginRight="5dp"
             android:background="#464646"
-
-
             android:text="3"
             android:textColor="#FFF"
             android:textSize="30sp" />
@@ -201,7 +175,6 @@
             android:id="@+id/btsum"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
             android:background="#222222"
             android:text="+"
             android:textColor="#FFF"

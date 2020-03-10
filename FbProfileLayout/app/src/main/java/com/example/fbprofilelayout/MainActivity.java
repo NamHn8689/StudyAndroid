@@ -19,7 +19,7 @@ public class MainActivity extends Activity {
         imageView = findViewById(R.id.rounldImage);
 
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(),
-                R.drawable.avatar);
+                R.drawable.avatar_image);
         roudndImage = new RoundImage(bitmap);
         imageView.setImageDrawable(roudndImage);
     }

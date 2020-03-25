@@ -9,7 +9,7 @@
         <EditText
             android:id="@+id/edtResult"
             android:layout_width="match_parent"
-            android:layout_height="152dp"
+            android:layout_height="220dp"
             android:layout_span="4"
             android:background="#000"
             android:focusable="false"

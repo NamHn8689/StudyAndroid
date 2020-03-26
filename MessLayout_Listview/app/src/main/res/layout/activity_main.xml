@@ -55,11 +55,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/edSearch"
         android:layout_width="match_parent"
         android:layout_height="42dp"
         android:layout_marginStart="13dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="13dp"
         android:background="@drawable/rectangular_radius_4"
         android:drawableLeft="@drawable/search"
@@ -86,7 +86,7 @@
         android:background="@drawable/circle"
         android:src="@drawable/icon_plus"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/edSearch"
         tools:ignore="MissingConstraints" />
 
     <ImageButton
@@ -96,9 +96,8 @@
         android:layout_marginStart="22dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/circle"
-        android:src="@drawable/icon_plus"
         app:layout_constraintStart_toEndOf="@+id/imageButton6"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/edSearch"
         tools:ignore="MissingConstraints" />
 
     <ImageButton
@@ -108,9 +107,8 @@
         android:layout_marginStart="22dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/circle"
-        android:src="@drawable/icon_plus"
         app:layout_constraintStart_toEndOf="@+id/imageButton5"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/edSearch"
         tools:ignore="MissingConstraints" />
 
     <ImageButton
@@ -120,9 +118,9 @@
         android:layout_marginStart="22dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/circle"
-        android:src="@drawable/icon_plus"
+
         app:layout_constraintStart_toEndOf="@+id/imageButton4"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/edSearch"
         tools:ignore="MissingConstraints" />
 
     <ImageButton
@@ -132,9 +130,8 @@
         android:layout_marginStart="22dp"
         android:layout_marginTop="18dp"
         android:background="@drawable/circle"
-        android:src="@drawable/icon_plus"
         app:layout_constraintStart_toEndOf="@+id/imageButton7"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/edSearch"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -200,5 +197,33 @@
         android:textSize="18dp"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/imageButton8" />
+
+    <ListView
+        android:id="@+id/lvFriend"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="240dp"
+        android:layout_marginBottom="69dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="464dp" />
+
+
+    <ImageButton
+        android:layout_width="216dp"
+        android:layout_height="69dp"
+        android:background="#000"
+        android:src="@drawable/message"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:layout_width="216dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="216dp"
+        android:background="#000"
+        android:src="@drawable/contact"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

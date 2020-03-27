@@ -8,47 +8,70 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Locale;
 
 public class FriendAdapter extends BaseAdapter {
+    Context mContext;
+    LayoutInflater inflate;
+    static ArrayList<Friend> friendList_original;
+    static ArrayList<Friend> temp_arrayList;
 
-    public Context context;
-    public int layout;
-    ArrayList<Friend> friendList;
+    public FriendAdapter(Context mContext, ArrayList<Friend> friendList_original) {
+        this.mContext = mContext;
+        this.friendList_original = friendList_original;
+        inflate = LayoutInflater.from(mContext);
+        this.temp_arrayList = new ArrayList<Friend>();
+        this.temp_arrayList.addAll(friendList_original);
+    }
 
-    public FriendAdapter(Context context, int layout, ArrayList<Friend> friendList) {
-        this.context = context;
-        this.layout = layout;
-        this.friendList = friendList;
+    public class ViewHolder {
+        TextView name;
+        TextView message;
     }
 
     @Override
     public int getCount() {
-        return friendList.size();
+        return friendList_original.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return friendList.get(position);
+        return friendList_original.get(position);
     }
 
     @Override
     public long getItemId(int position) {
-        return 0;
-    }
+        return position;
+    };
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-
-        convertView = inflater.inflate(layout, null);
-
-        TextView tvName = convertView.findViewById(R.id.tvName);
-        TextView tvMessage = convertView.findViewById(R.id.tvMessage);
-
-        tvName.setText(friendList.get(position).getName());
-        tvMessage.setText(friendList.get(position).getMessage());
-
+        final ViewHolder holder;
+        if (convertView == null) {
+            holder = new ViewHolder();
+            convertView = inflate.inflate(R.layout.data_lv, null);
+            holder.name = (TextView) convertView.findViewById(R.id.tvName);
+            holder.message = (TextView) convertView.findViewById(R.id.tvMessage);
+            convertView.setTag(holder);
+        } else {
+            holder = (ViewHolder) convertView.getTag();
+        }
+        holder.name.setText(friendList_original.get(position).getName());
+        holder.message.setText(friendList_original.get(position).getMessage());
         return convertView;
+    }
+
+    //Filter Class
+    public static void filter(String charText) {
+        charText = charText.toLowerCase(Locale.getDefault());
+        friendList_original.clear();
+        if (charText.length() == 0) {
+            friendList_original.addAll(temp_arrayList);
+        } else {
+            for (Friend t : temp_arrayList) {
+                if (t.getName().toLowerCase(Locale.getDefault()).contains(charText))
+                    friendList_original.add(t);
+            }
+        }
     }
 }

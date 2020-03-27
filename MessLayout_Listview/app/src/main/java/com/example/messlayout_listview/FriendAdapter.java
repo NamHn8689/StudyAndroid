@@ -31,18 +31,18 @@ public class FriendAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return friendList_original.size();
+        return temp_arrayList.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return friendList_original.get(position);
+        return temp_arrayList.get(position);
     }
 
     @Override
     public long getItemId(int position) {
         return position;
-    };
+    }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -56,22 +56,25 @@ public class FriendAdapter extends BaseAdapter {
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-        holder.name.setText(friendList_original.get(position).getName());
-        holder.message.setText(friendList_original.get(position).getMessage());
+        holder.name.setText(temp_arrayList.get(position).getName());
+        holder.message.setText(temp_arrayList.get(position).getMessage());
         return convertView;
     }
 
     //Filter Class
     public static void filter(String charText) {
-        charText = charText.toLowerCase(Locale.getDefault());
-        friendList_original.clear();
+        charText = charText.toLowerCase(Locale.getDefault()).trim();
+        temp_arrayList.clear();
+
+
         if (charText.length() == 0) {
-            friendList_original.addAll(temp_arrayList);
+            temp_arrayList.addAll(friendList_original);
         } else {
-            for (Friend t : temp_arrayList) {
+            for (Friend t : friendList_original) {
                 if (t.getName().toLowerCase(Locale.getDefault()).contains(charText))
-                    friendList_original.add(t);
+                    temp_arrayList.add(t);
             }
         }
     }
+
 }

@@ -51,14 +51,17 @@ public class MainActivity extends Activity {
         edSearch.addTextChangedListener(new TextWatcher() {
 
             public void afterTextChanged(Editable s) {
-
+//                String text = edSearch.getText().toString();
+//                friendAdapter.filter(text);
             }
 
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+//                String text = edSearch.getText().toString();
+//                friendAdapter.filter(text);
             }
 
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                String text = edSearch.getText().toString().toLowerCase(Locale.getDefault());
+                String text = edSearch.getText().toString();
                 friendAdapter.filter(text);
             }
 

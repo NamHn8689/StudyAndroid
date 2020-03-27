@@ -65,8 +65,6 @@ public class FriendAdapter extends BaseAdapter {
     public static void filter(String charText) {
         charText = charText.toLowerCase(Locale.getDefault()).trim();
         temp_arrayList.clear();
-
-
         if (charText.length() == 0) {
             temp_arrayList.addAll(friendList_original);
         } else {

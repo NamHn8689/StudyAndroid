@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000"
-
     android:paddingLeft="13dp">
 
     <ImageButton
@@ -40,39 +39,4 @@
         android:textSize="20dp"
         app:layout_constraintStart_toEndOf="@+id/btavatar"
         app:layout_constraintTop_toBottomOf="@+id/tvName" />
-    <!--    <ImageButton-->
-    <!--        android:id="@+id/btavatar"-->
-    <!--        android:layout_width="80dp"-->
-    <!--        android:layout_height="80dp"-->
-    <!--        android:layout_marginLeft="13dp"-->
-    <!--        android:layout_marginTop="15dp"-->
-    <!--        android:background="#000"-->
-    <!--        android:src="@drawable/dang"></ImageButton>-->
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/tvName"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginTop="15dp"-->
-    <!--        android:gravity="bottom"-->
-    <!--        android:paddingLeft="5dp"-->
-    <!--        android:text="Name"-->
-    <!--        android:textColor="#fff"-->
-    <!--        android:textSize="23dp"-->
-    <!--        app:layout_constraintStart_toEndOf="@+id/btavatar"-->
-    <!--        app:layout_constraintTop_toTopOf="parent" />-->
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/tvMessage"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginTop="5dp"-->
-    <!--        android:gravity="bottom"-->
-    <!--        android:paddingLeft="5dp"-->
-    <!--        android:text="Message"-->
-    <!--        android:textColor="#333333"-->
-    <!--        android:textSize="20dp"-->
-    <!--        app:layout_constraintStart_toEndOf="@+id/btavatar"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/tvName" />-->
-    <!--    -->
 </androidx.constraintlayout.widget.ConstraintLayout>

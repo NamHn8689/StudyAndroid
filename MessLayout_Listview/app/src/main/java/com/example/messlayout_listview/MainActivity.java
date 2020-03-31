@@ -8,7 +8,6 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class MainActivity extends Activity {
     String a = "Lorem Ipsum is simply dummy text";
@@ -26,7 +25,7 @@ public class MainActivity extends Activity {
         friendList = new ArrayList<Friend>();
 
         friendList.add(new Friend("Lorem", a));
-        friendList.add(new Friend("Ipsum", a));
+        friendList.add(new Friend("Terijwezen", a));
         friendList.add(new Friend("Neque Porro", a));
         friendList.add(new Friend("Quisquam Est", a));
         friendList.add(new Friend("Qui Dolorem", a));
@@ -34,37 +33,38 @@ public class MainActivity extends Activity {
         friendList.add(new Friend("Sit Amet", a));
         friendList.add(new Friend("Consectetur", a));
         friendList.add(new Friend("Adipisci Velit", a));
+        friendList.add(new Friend("Ame To Srit", a));
         friendList.add(new Friend("ELe Tetterzetting", a));
         friendList.add(new Friend("Zet Terijwezen", a));
+        friendList.add(new Friend("Tit Loreea", a));
         friendList.add(new Friend("Gebruwe Terijzeniken", a));
         friendList.add(new Friend("kKlassieke Literatuur ", a));
 
-        friendAdapter = new FriendAdapter(MainActivity.this, friendList);
+        friendAdapter = new FriendAdapter(MainActivity.this, R.layout.data_lv, friendList);
         lvFriend.setAdapter(friendAdapter);
 
-        // Locate the EditText in listview_main.xml
-        edSearch = (EditText) findViewById(R.id.edSearch);
+        edSearch = findViewById(R.id.edSearch);
 
-        final ArrayList<Friend> array_sort = new ArrayList<>();
-
-        // Capture Text in EditText
         edSearch.addTextChangedListener(new TextWatcher() {
-
+            @Override
             public void afterTextChanged(Editable s) {
-//                String text = edSearch.getText().toString();
-//                friendAdapter.filter(text);
+                ArrayList<Friend> newList = new ArrayList<>();
+
+                for (int i = 0; i < friendList.size(); i++)
+                    if (friendList.get(i).getName().toLowerCase().contains(s.toString().toLowerCase().trim()))
+                        newList.add(friendList.get(i));
+                FriendAdapter adapter = new FriendAdapter(MainActivity.this, R.layout.data_lv, newList);
+                lvFriend.setAdapter(adapter);
             }
 
+            @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//                String text = edSearch.getText().toString();
-//                friendAdapter.filter(text);
             }
 
+            @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                String text = edSearch.getText().toString();
-                friendAdapter.filter(text);
             }
-
         });
+
     }
 }

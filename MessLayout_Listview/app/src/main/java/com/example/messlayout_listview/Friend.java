@@ -1,7 +1,7 @@
 package com.example.messlayout_listview;
 
 public class Friend {
-    String name,message;
+    String name, message;
 
     public Friend(String name, String message) {
         this.name = name;

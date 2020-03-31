@@ -8,7 +8,6 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class FriendAdapter extends BaseAdapter {
     public Context context;

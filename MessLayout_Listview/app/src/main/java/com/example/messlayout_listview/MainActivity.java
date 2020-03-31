@@ -29,6 +29,7 @@ public class MainActivity extends Activity {
         friendList.add(new Friend("Neque Porro", a));
         friendList.add(new Friend("Quisquam Est", a));
         friendList.add(new Friend("Qui Dolorem", a));
+        friendList.add(new Friend("Qui Dolorem", a));
         friendList.add(new Friend("Quia Dolor", a));
         friendList.add(new Friend("Sit Amet", a));
         friendList.add(new Friend("Consectetur", a));
